@@ -1,0 +1,33 @@
+<FlexboxLayout flexDirection="column" class="page">
+
+  <FlexboxLayout 
+    flexDirection="column" 
+    justifyContent="center" 
+    alignItems="stretch" 
+    height="40%" 
+    backgroundColor="blue" >
+    <Image src="res://domoticlogin"></Image>
+  </FlexboxLayout>
+  
+  <FlexboxLayout flexDirection="column" height="60%" class="form">
+
+    <StackLayout class="input-field" margin="40 20 20 20" >
+      <TextField [(ngModel)]="name" hint="User" class="input"></TextField>
+      <StackLayout class="hr-light"></StackLayout>
+    </StackLayout>
+  
+    <StackLayout class="input-field" margin="20" >
+      <TextField [(ngModel)]="password" hint="Password" secure="true" class="input"></TextField>
+      <StackLayout class="hr-light"></StackLayout>
+    </StackLayout>
+
+    <Button 
+      margin="20"
+      class="btn btn-primary btn-outline btn-active" 
+      text="Login" 
+      (tap)="login()">
+    </Button>
+  
+  </FlexboxLayout>
+
+</FlexboxLayout>
